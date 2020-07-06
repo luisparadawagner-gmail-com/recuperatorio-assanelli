@@ -1,3 +1,9 @@
-<app-crear-viaje></app-crear-viaje>
+<!--<app-crear-viaje></app-crear-viaje>-->
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/crear-viaje-component" routerLinkActive="active">Crear viaje</button>
+    <button mat-menu-item routerLink="/tabla-viaje-component" routerLinkActive="active">Tabla viaje</button>
+</mat-menu>
+
 <router-outlet>
 </router-outlet>
