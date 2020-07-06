@@ -1,1 +1,54 @@
-<p>crear-viaje works!</p>
+<form [formGroup]='viajeForm' (ngSubmit)=submit()>
+    <div class="">
+        <mat-card class="container">
+            <mat-card-title>Cargar Viaje</mat-card-title>
+
+            <div class="container">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Nombre: </mat-label>
+                    <input type="text" formControlName="nombre" matInput placeholder="Nombre">
+
+                </mat-form-field>
+            </div>
+            <div class="container">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Apellido: </mat-label>
+                    <input type="text" formControlName="apellido" matInput placeholder="Apellido">
+
+                </mat-form-field>
+            </div>
+            <div class="container">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Edad: </mat-label>
+                    <input type="number" formControlName="edad" matInput placeholder="Edad">
+
+                </mat-form-field>
+            </div>
+            <div class="container">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Destino: </mat-label>
+                    <select matNativeControl required formControlName="destino">
+                        <option value="Roma">Roma</option>
+                        <option value="Barcelona">Barcelona</option>
+                        <option value="Berlin">Berlin</option>
+                    </select>
+
+                </mat-form-field>
+            </div>
+            <div class="container">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Fecha viaje: </mat-label>
+                    <input type="text" formControlName="fechaViaje" matInput placeholder="Fecha viaje">
+
+                </mat-form-field>
+            </div>
+            <mat-card-actions>
+                <div>
+                    <button mat-raised-button color="primary">Guardar</button>
+                </div>
+
+            </mat-card-actions>
+
+        </mat-card>
+    </div>
+</form>
